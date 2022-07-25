@@ -11,7 +11,7 @@ def dislike(youtube_video):
 		youtube_video["dislikes"] += 1
 
 def add_comment(youtubevideo, username, comment_text):
-	youtubevideo[username] = comment_text
+	youtubevideo['comments'] = {username, comment_text}
 	return youtubevideo
 
 
@@ -26,5 +26,6 @@ def main():
 	print(new_youtube_dict['dislikes'], " people disliked this :(")
 	print("Comments: \n==========")
 	print(new_youtube_dict['comments'])
+
 if __name__ == '__main__':
 	main()
